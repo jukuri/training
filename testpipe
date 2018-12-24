@@ -1,0 +1,83 @@
+pipeline {
+
+  agent any
+
+  environment {
+    variable="someValue"
+  }
+
+  stages {
+    stage ('Checkout') {
+      steps {
+        echo 'echo helo'  
+      }
+    }
+    stage ('Code Build') {
+      steps { 
+        echo 'echo helo'  
+      }
+    }
+    stage ('RUN Tests') {
+      steps {
+        echo 'echo helo'  
+      }
+    }
+    stage ('Deploy to Nexus') {
+      steps {
+        echo 'echo helo'  
+      }
+    }
+    stage ('Deploy to DEV') {
+      steps {
+        echo 'echo helo'  
+      }
+    }
+    stage ('RUN Tests on DEV') {
+      steps {
+        echo 'echo helo'  
+      }
+    }
+    stage ('Deploy to QA') {
+      steps {
+        echo 'echo helo'  
+      }
+    }
+    stage ('RUN Tests on QA') {
+      steps {
+        echo 'echo helo'  
+      }
+    }
+    stage ('Staging Approval') {
+      steps {
+        input 'Do you approve deployment on Staging?'
+        echo 'echo helo'  
+      }
+    }
+    stage ('Deploy to Staging') {
+      steps {
+        echo 'echo helo'  
+      }
+    }
+    stage ('RUN Tests on Staging') {
+      steps {
+        echo 'echo helo'  
+      }
+    }
+    stage ('Production approval') {
+      steps {
+        input 'Do you approve deployment on Staging?'
+        echo 'echo helo'  
+      }
+    }
+    stage ('Deploy to Production') {
+      steps {
+        echo 'echo helo'  
+      }
+    }
+    stage ('RUN Tests on Production') {
+      steps {
+        echo 'echo helo'  
+      }
+    }
+  }
+}
